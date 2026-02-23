@@ -1,11 +1,6 @@
 # Guía Completa de Implementación de Depósitos a Empleados con Monnet
 
-Esta guía consolida la información de los siguientes documentos oficiales:
-- [Payout Flow](01-Quick%20Start/01-Payout%20Flow.md)
-- [Country Requirements: Peru](02-Country%20Requirements/Peru.md)
-- [Create Payout API](03-API%20PAYOUT/01-API%20Reference/01-Create%20Payout.md)
-- [Get Balance API](03-API%20PAYOUT/01-API%20Reference/03-Get%20Balance.md)
-- [Monnet Error Codes](04-RECURSES/02-Monnet%20error%20codes.md)
+Esta guía consolida información sobre depósitos a empleados, flujo de pagos, requisitos de país, APIs de creación y consulta de saldo, así como códigos de error de Monnet.
 
 ## Tabla de Contenidos
 1. [Introducción](#introducción)
@@ -29,12 +24,11 @@ Esta guía consolida la información de los siguientes documentos oficiales:
 
 Esta guía proporciona una implementación completa y detallada para realizar depósitos a cuentas bancarias de empleados utilizando la API de Monnet Payouts. Está diseñada específicamente para integrarse con sistemas de préstamos y adelantos de sueldo.
 
-Para una visión general del flujo, consulta: [Payout Flow](01-Quick%20Start/01-Payout%20Flow.md).
+Para una visión general del flujo, consulta la sección "Flujo de Depósito" en esta guía.
 
 ## Requisitos Previos
 
 > **Nota sobre entornos:** Monnet ofrece entornos de pruebas (Certificación) y producción.
-> Fuente: [Environments](01-Quick%20Start/03-Environments.md)
 
 1. **Credenciales de Monnet**:
    - Merchant ID
@@ -53,7 +47,7 @@ Para una visión general del flujo, consulta: [Payout Flow](01-Quick%20Start/01-
 
 ## Flujo de Depósito
 
-> **Referencia visual:** Diagrama completo del flujo de pagos disponible en [Payout Flow](01-Quick%20Start/01-Payout%20Flow.md).
+> **Referencia visual:** Diagrama completo del flujo de pagos.
 
 El proceso de desembolso consta de etapas críticas que aseguran la correcta validación y ejecución del pago:
 
@@ -76,7 +70,6 @@ Antes de invocar la API de desembolso, se recomienda validar las siguientes regl
 ## Gestión de Saldo
 
 Antes de realizar cualquier dispersión, es fundamental verificar que la cuenta del comercio tenga fondos suficientes.
-Fuente: [Get Balance API](03-API%20PAYOUT/01-API%20Reference/03-Get%20Balance.md).
 
 ### Consultar Saldo Disponible
 
@@ -130,7 +123,7 @@ Obtener token en:
 
 ## API de Creación de Payouts
 
-> **Documentación Oficial:** [Create Payout API](03-API%20PAYOUT/01-API%20Reference/01-Create%20Payout.md)
+> **Estructura de la API:** Crear Payout
 
 ### Estructura Básica
 
@@ -169,7 +162,7 @@ Obtener token en:
 
 ## Parámetros Obligatorios
 
-> **Validaciones de País:** Basado en los requisitos específicos para Perú definidos en [Country Requirements: Peru](02-Country%20Requirements/Peru.md).
+> **Validaciones de País:** Basado en los requisitos específicos para Perú.
 
 ### Campos Requeridos
 
@@ -477,7 +470,7 @@ Obtener token en:
 
 ## Notificaciones
 
-> **Guía de Integración:** Detalles completos sobre configuración y seguridad de webhooks en [Notification API](03-API%20PAYOUT/01-API%20Reference/04-Notification.md).
+> **Configuración de Notificaciones:** Las notificaciones se configuran con tu account manager en Monnet.
 
 ### Configuración de Notificaciones
 
@@ -796,7 +789,7 @@ Para cualquier problema o consulta:
 
 ## Anexo: Códigos de Error Completos
 
-> **Recurso Original:** [Monnet error codes](04-RECURSES/02-Monnet%20error%20codes.md)
+> **Códigos de Error:** Referencia completa detallada a continuación
 
 ### Errores de Validación Básica (Layer 1)
 | Code | Message | Field |
